@@ -1,8 +1,8 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:weather_app/components/weather_item.dart';
-import 'package:weather_app/constants.dart';
+import 'package:clima_sv/components/weather_item.dart';
+import 'package:clima_sv/constants.dart';
 
 class DetailPage extends StatefulWidget {
   final dailyForecastWeather;
