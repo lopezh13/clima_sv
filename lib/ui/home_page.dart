@@ -9,7 +9,7 @@ import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 import 'package:clima_sv/components/weather_item.dart';
 import 'package:clima_sv/constants.dart';
 import 'package:clima_sv/ui/detail_page.dart';
-import 'package:clima_sv/ui/get_started.dart'; // Asegúrate de importar la clase GetStarted
+import 'package:clima_sv/ui/get_started.dart'; 
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> {
 
   static String API_KEY = 'c72b03fa7ffe4279a6010825231011'; //api key 
 
-  String location = 'El Salvador'; // key del pais 
+  String location = 'Costa Rica'; // key del pais 
   String weatherIcon = 'heavycloudy.png';
   int temperature = 0;
   int windSpeed = 0;
