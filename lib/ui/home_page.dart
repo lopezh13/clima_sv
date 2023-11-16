@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> {
 
   static String API_KEY = 'c72b03fa7ffe4279a6010825231011'; //api key 
 
-  String location = 'Costa Rica'; // key del pais 
+  String location = 'Perú'; // key del pais 
   String weatherIcon = 'heavycloudy.png';
   int temperature = 0;
   int windSpeed = 0;
