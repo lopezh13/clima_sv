@@ -3,13 +3,13 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
 import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
-import 'package:weather_app/components/weather_item.dart';
-import 'package:weather_app/constants.dart';
-import 'package:weather_app/ui/detail_page.dart';
+import 'package:clima_sv/components/weather_item.dart';
+import 'package:clima_sv/constants.dart';
+import 'package:clima_sv/ui/detail_page.dart';
+import 'package:clima_sv/ui/get_started.dart'; // Asegúrate de importar la clase GetStarted
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -22,9 +22,9 @@ class _HomePageState extends State<HomePage> {
   final TextEditingController _cityController = TextEditingController();
   final Constants _constants = Constants();
 
-  static String API_KEY = 'c72b03fa7ffe4279a6010825231011';
+  static String API_KEY = 'c72b03fa7ffe4279a6010825231011'; //api key 
 
-  String location = 'El Salvador';
+  String location = 'El Salvador'; // key del pais 
   String weatherIcon = 'heavycloudy.png';
   int temperature = 0;
   int windSpeed = 0;
@@ -135,7 +135,6 @@ class _HomePageState extends State<HomePage> {
                 borderRadius: BorderRadius.circular(20),
               ),
               child: Column(
-                //crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Row(
@@ -144,7 +143,9 @@ class _HomePageState extends State<HomePage> {
                     children: [
                       // dark mode icon
                       IconButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          mostrarDialogoCerrarSesion(context);
+                        },
                         icon: const Icon(
                           Icons.nightlight_round,
                           color: Colors.white,
@@ -241,18 +242,10 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ],
                       ),
-                      // ClipRRect(
-                      //   borderRadius: BorderRadius.circular(10),
-                      //   child: Image.asset(
-                      //     "assets/profile.png",
-                      //     width: 40,
-                      //     height: 40,
-                      //   ),
-                      // ),
                     ],
                   ),
                   SizedBox(
-                    height: 160,
+                    height: 140,
                     child: Image.asset("assets/" + weatherIcon),
                   ),
                   Row(
@@ -339,7 +332,7 @@ class _HomePageState extends State<HomePage> {
                         'Today',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: 20.0,
+                          fontSize: 20,
                         ),
                       ),
                       GestureDetector(
@@ -365,7 +358,7 @@ class _HomePageState extends State<HomePage> {
                     height: 8,
                   ),
                   SizedBox(
-                    height: 110,
+                    height: 105,
                     child: ListView.builder(
                       itemCount: hourlyWeatherForecast.length,
                       scrollDirection: Axis.horizontal,
@@ -462,6 +455,36 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
+    );
+  }
+
+  void mostrarDialogoCerrarSesion(BuildContext context) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text("Cerrar Sesión"),
+          content: Text("¿Quieres cerrar sesión?"),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop(); // Cierra el diálogo.
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => GetStarted()),
+                );
+              },
+              child: Text("Sí"),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop(); // Cierra el diálogo.
+              },
+              child: Text("No"),
+            ),
+          ],
+        );
+      },
     );
   }
 }

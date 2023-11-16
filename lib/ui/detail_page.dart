@@ -204,7 +204,7 @@ class _DetailPageState extends State<DetailPage> {
                                 children: [
                                   Card(
                                     elevation: 3.0,
-                                    margin: const EdgeInsets.only(bottom: 20),
+                                    margin: const EdgeInsets.only(bottom: 5),
                                     child: Padding(
                                       padding: const EdgeInsets.all(8.0),
                                       child: Column(
@@ -352,7 +352,7 @@ class _DetailPageState extends State<DetailPage> {
                                   ),
                                   Card(
                                     elevation: 3.0,
-                                    margin: const EdgeInsets.only(bottom: 20),
+                                    margin: const EdgeInsets.only(bottom: 5),
                                     child: Padding(
                                       padding: const EdgeInsets.all(8.0),
                                       child: Column(
@@ -500,7 +500,7 @@ class _DetailPageState extends State<DetailPage> {
                                   ),
                                   Card(
                                     elevation: 3.0,
-                                    margin: const EdgeInsets.only(bottom: 20),
+                                    margin: const EdgeInsets.only(bottom: 5),
                                     child: Padding(
                                       padding: const EdgeInsets.all(8.0),
                                       child: Column(

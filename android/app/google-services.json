@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "535597380734",
+    "project_id": "climasv-d0c31",
+    "storage_bucket": "climasv-d0c31.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:535597380734:android:c9d4d01a0c854db962d42f",
+        "android_client_info": {
+          "package_name": "com.appclimasv.clima_sv"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCL0NvD5XOymlvdqu0q_g2hufYaJwn-TFg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
